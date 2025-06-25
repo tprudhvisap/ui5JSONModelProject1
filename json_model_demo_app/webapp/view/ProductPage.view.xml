@@ -1,0 +1,54 @@
+<mvc:View controllerName="app.jsonmodel.com.jsonmodeldemoapp.controller.ProductPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="idProductPage" title="{i18n>title}">
+        <content>
+            <Table id="idProductCollectionTable" items="{ProductJSONModel>/ProductCollection}">
+                <columns>
+                    <Column id="idProductIdColumn">
+                        <header>
+                            <Label text="Product ID" />
+                        </header>
+                    </Column>
+                    <Column id="idProductNameColumn">
+                        <header>
+                            <Label text="Product Name" />
+                        </header>
+                    </Column>
+                    <Column >
+                        <header>
+                            <Label text="Category" />
+                        </header>
+                    </Column>
+                    <Column >
+                        <header>
+                            <Label text="Price" />
+                        </header>
+                    </Column>
+                    <Column >
+                        <header>
+                            <Label text="Quantity" />
+                        </header>
+                    </Column>
+                    <Column >
+                        <header>
+                            <Label text="Pic" />
+                        </header>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ProductJSONModel>ProductId}"></Text>
+                            <Text text="{ProductJSONModel>Name}"></Text>
+                            <Text text="{ProductJSONModel>Category}"></Text>
+                            <Text text="{ProductJSONModel>Price}"></Text>
+                            <Text text="{ProductJSONModel>Quantity}"></Text>
+                            <Image src="{ProductJSONModel>ProductPicUrl}" width="50px" height="50px"></Image>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
